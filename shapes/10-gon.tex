@@ -1,0 +1,18 @@
+\documentclass[crop, tikz]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+
+\usetikzlibrary{positioning, decorations.pathmorphing}
+
+\begin{document}
+\newdimen\R
+\R=0.8cm
+
+\begin{tikzpicture}[scale=3.5]
+    \draw[yshift=-6.0\R] (0:\R) \foreach \x in {36,72,...,359} {
+            -- (\x:\R)
+        } -- cycle (90:\R)  ;
+\end{tikzpicture}
+\end{document}
